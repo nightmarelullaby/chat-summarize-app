@@ -19,7 +19,7 @@ export default function Home() {
     const letterCount = getLetterCount(input)
     setMessages(prev => [...prev,{lettersCount:letterCount,wordCount:wordCount,content:input,sender:true,author:"User",date:moment().format('LT')}])
     setInput("")
-    const req =  await fetch("http://localhost:3000/api/summarize",{
+    const req =  await fetch("/api/summarize",{
       headers:{
         "Content-Type":"application/json"
       },

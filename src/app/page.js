@@ -43,7 +43,7 @@ export default function Home() {
   }
 
   return (
-    <main ref={ref} className="relative overflow-hidden h-screen">
+    <main ref={ref} className="relative h-screen overflow-y-scroll">
         <div className="h-fit-content fixed z-30 p-2 w-full top-0 bg-neutral-800">
          <User   
           name="Resumenes de texto"

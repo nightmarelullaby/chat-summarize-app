@@ -1,6 +1,7 @@
+// "use client"
 import './globals.css'
 import { Inter } from 'next/font/google'
-
+import NextUILayoutProvider from "./context/NextUIProvider"
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
@@ -10,8 +11,13 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
-    </html>
+      <html lang="en" className='dark'>
+        <body className={inter.className}>
+            <NextUILayoutProvider>
+              {children}
+            </NextUILayoutProvider>
+        </body>
+      </html>
+    
   )
 }
